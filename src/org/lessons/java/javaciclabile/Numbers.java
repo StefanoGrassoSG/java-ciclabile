@@ -22,15 +22,15 @@ public class Numbers {
 		this.currentIndex = 0;
 	}
 	
-	public void addElemento(int number) {
-		int[] nuovoArray = new int[numbers.length + 1];
+	public void addElement(int number) {
+		int[] newArr = new int[numbers.length + 1];
 		for (int i = 0; i < numbers.length; i++) {
-            nuovoArray[i] = numbers[i];
+			newArr[i] = numbers[i];
         }
-		nuovoArray[numbers.length] = number;
-		numbers = nuovoArray;
+		newArr[numbers.length] = number;
+		numbers = newArr;
 	}
-	public int getElementoSuccessivo() {
+	public int getNextElement() {
 	   int nextI = numbers[currentIndex];
 	   currentIndex = currentIndex + 1;
         return nextI;
